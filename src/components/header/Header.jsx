@@ -28,7 +28,7 @@ const Header = () => {
   useEffect(() => {}, [location]);
 
   const controlNavbar = () => {
-    console.log(window.scrollY);
+    // console.log(window.scrollY);
     if (window.scrollY > 200) {
       if (window.scrollY > lastScrollY && !mobileMenu) {
         setShow("hide");

@@ -1,4 +1,3 @@
-import React from "react";
 import { useEffect } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { fetchDataFromApi } from "./utils/api";
