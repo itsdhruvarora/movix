@@ -12,11 +12,12 @@ import Img from "../lazyLoadImage/Img";
 import PosterFallback from "../../assets/no-poster.png";
 
 import "./style.scss";
+import Genres from "../genres/Genres";
 const Carousel = ({ data, loading }) => {
   const carouselContainer = useRef();
   const { url } = useSelector((state) => state.home);
   const navigate = useNavigate();
-  console.log(carouselContainer);
+  //   console.log(carouselContainer);
   const navigation = (dir) => {};
   const skItem = () => {
     return (
@@ -51,6 +52,7 @@ const Carousel = ({ data, loading }) => {
                   <div className="posterBlock">
                     <Img src={posterUrl} />{" "}
                     <CircleRating rating={item.vote_average.toFixed(1)} />
+                    <Genres data={item.genre_ids.slice(0, 2)} />
                   </div>
                 </div>
               );
